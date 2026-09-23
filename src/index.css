@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252e42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4866;
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-dense {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Custom animation utility */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Tabular figures for data tables and telemetry */
+.tabular-data {
+  font-variant-numeric: tabular-nums;
+}
